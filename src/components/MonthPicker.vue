@@ -63,7 +63,7 @@ const formattedSelection = computed(() => {
     <div class="picker-header" @click="toggleExpand">
       <span class="selected-display">{{ formattedSelection }}</span>
       <button class="expand-btn" :class="{ expanded: isExpanded }">
-        ▼
+        <i :class="isExpanded ? 'fas fa-chevron-up' : 'fas fa-chevron-down'"></i>
       </button>
     </div>
     <div v-show="isExpanded" class="picker-content">
