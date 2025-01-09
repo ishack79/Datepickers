@@ -61,7 +61,10 @@ const formattedSelection = computed(() => {
 <template>
   <div class="picker-container" :class="{ expanded: isExpanded }">
     <div class="picker-header" @click="toggleExpand">
-      <span class="selected-display">{{ formattedSelection }}</span>
+      <div class="header-content">
+        <i class="fas fa-calendar-alt calendar-icon"></i>
+        <span class="selected-display">{{ formattedSelection }}</span>
+      </div>
       <button class="expand-btn" :class="{ expanded: isExpanded }">
         <i :class="isExpanded ? 'fas fa-chevron-up' : 'fas fa-chevron-down'"></i>
       </button>
@@ -112,6 +115,17 @@ const formattedSelection = computed(() => {
   cursor: pointer;
   border-bottom: 1px solid transparent;
   transition: all 0.3s ease;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.calendar-icon {
+  color: #fffflemonchiffon;
+  font-size: 1.1rem;
 }
 
 .picker-header:hover {

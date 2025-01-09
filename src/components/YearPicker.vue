@@ -53,8 +53,13 @@ const yearOptions = computed(() =>
 }
 
 .year-picker:focus {
-  outline: 2px solid #646cff;
-  border-color: #646cff;
+  outline: 2px solid #248E88;
+  border-color: #248E88;
+}
+
+.year-picker option:checked {
+  background-color: #248E88;
+  color: white;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -66,6 +71,11 @@ const yearOptions = computed(() =>
     background: #1a1a1a;
     color: #fff;
     border-color: #444;
+  }
+  
+  .year-picker option:checked {
+    background-color: #248E88;
+    color: white;
   }
 }
 </style>
